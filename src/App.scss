@@ -1,0 +1,51 @@
+@import url(./style/sidebar.scss);
+@import url(./style/product.scss);
+@import url(./style/button.scss);
+
+// variable
+$sidebar_width: 14rem;
+$main_bg: #ffdde1;
+$white: rgba(255, 255, 255, 0.65);
+
+.root-container {
+  display: flex;
+  height: 100%;
+  background-color: $main_bg;
+}
+
+.side_bar {
+  width: $sidebar_width;
+  background-color: $white;
+
+  nav {
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+
+        a {
+          width: 100%;
+          text-align: left;
+          padding: 12px 25px;
+          display: block;
+          text-decoration: none;
+          color: #868686;
+          font-weight: 500;
+          &.active {
+            background-color:$main_bg;
+            color: #000000;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  height: 100%;
+  width: calc(100% - $sidebar_width);
+  background: $main_bg;
+  overflow-y: auto;
+}
